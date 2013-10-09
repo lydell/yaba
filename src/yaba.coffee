@@ -15,7 +15,7 @@ You should have received a copy of the GNU Lesser General Public License along w
 see <http://www.gnu.org/licenses/>.
 ###
 
-parseStack     = require "../../parse-stack/src/parse-stack"
+parseStack     = require "parse-stack"
 getExpression  = require "./getExpression"
 
 
