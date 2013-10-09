@@ -37,7 +37,7 @@ yaba = (value)->
 			# At this point the stack trace is: `yaba` > call of `yaba`.
 			expression = getExpression(stack[1])
 	catch error
-		(console?.log ? window.alert)("yaba: #{error}")
+		console?.log "yaba: #{error}"
 
 	message = expression or "Assertion #{yaba.runs} failed"
 	message += " -- #{yaba.message}" if yaba.message
