@@ -1,6 +1,6 @@
 {
   "name": "yaba",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Simon Lydell",
   "license": "LGPLv3",
   "description": "Yet Another Better Assert. Shows the expression. Cross-browser.",
@@ -28,6 +28,7 @@
     "coffee-script": "~1.6.3",
     "sinon": "~1.7.3",
     "equals": "~0.3.2",
-    "throws": "~0.1.0"
+    "throws": "~0.1.0",
+    "yaba": "~0.1.0"
   }
 }
