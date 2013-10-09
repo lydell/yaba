@@ -1,0 +1,3 @@
+*.sublime-*
+component.json
+bower.json

@@ -1,0 +1,33 @@
+{
+  "name": "yaba",
+  "version": "0.1.0",
+  "author": "Simon Lydell",
+  "license": "LGPLv3",
+  "description": "Yet Another Better Assert. Shows the expression. Cross-browser.",
+  "main": "lib/yaba",
+  "repository": "lydell/yaba",
+  "homepage": "https://github.com/lydell/yaba",
+  "bugs": "https://github.com/lydell/yaba/issues",
+  "keywords": [
+    "assert",
+    "assertion",
+    "assertions",
+    "c",
+    "self-documenting",
+    "test"
+  ],
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script",
+    "prepublish": "rm -rf lib && coffee --bare --output lib/ src/"
+  },
+  "dependencies": {
+    "parse-stack": "~0.1.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.13.0",
+    "coffee-script": "~1.6.3",
+    "sinon": "~1.7.3",
+    "equals": "~0.3.2",
+    "throws": "~0.1.0"
+  }
+}
