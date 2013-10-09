@@ -117,6 +117,7 @@ expect(1).to.eql('1');
 ```coffee
 assert equal {a: "b"}, {a: "b"}
 assert equal 1, "1"
+```
 
 
 **a**/**an**: asserts `typeof` with support for `array` type and `instanceof`
