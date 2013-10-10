@@ -53,8 +53,8 @@ describe "getExpression", ->
 
 
 	it "requires an object as argument", ->
-		assert throws TypeError("undefined"), -> getExpression()
-		assert throws TypeError("null"),      -> getExpression(null)
+		assert throws TypeError, -> getExpression()
+		assert throws TypeError, -> getExpression(null)
 
 
 	it "requires the passed object to have a `filepath` property, which is a string", ->

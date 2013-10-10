@@ -28,6 +28,19 @@ Installation
 ============
 
 `npm install yaba`
+`component install lydell/yaba`
+
+CommonJS: `var assert = require("yaba")`
+
+AMD and regular old browser globals: Use ./yaba.js
+
+
+Tests
+=====
+
+Node.js: `npm test`
+
+Browser: Open ./test/browser/index.html
 
 
 Usage

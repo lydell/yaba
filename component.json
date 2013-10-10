@@ -1,0 +1,21 @@
+{
+  "name": "yaba",
+  "version": "0.1.8",
+  "license": "LGPLv3",
+  "description": "Helps testing error throwing of functions.",
+  "main": "lib/yaba.js",
+  "repo": "lydell/yaba",
+  "keywords": [
+    "assert",
+    "assertion",
+    "assertions",
+    "c",
+    "self-documenting",
+    "test"
+  ],
+  "scripts": [
+    "lib/yaba.js",
+    "lib/getExpression.js",
+    "lib/readFileSync.js"
+  ]
+}
