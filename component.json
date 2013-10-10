@@ -2,7 +2,7 @@
   "name": "yaba",
   "version": "0.1.8",
   "license": "LGPLv3",
-  "description": "Helps testing error throwing of functions.",
+  "description": "Yet Another Better Assert. Shows the expression. Cross-browser.",
   "main": "lib/yaba.js",
   "repo": "lydell/yaba",
   "keywords": [
