@@ -15,8 +15,7 @@ You should have received a copy of the GNU Lesser General Public License along w
 see <http://www.gnu.org/licenses/>.
 ###
 
-assert = require "yaba"
-throws = require "throws"
+{assert, throws} = require "./common"
 
 yaba = require "../src/yaba"
 

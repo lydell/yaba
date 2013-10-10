@@ -15,12 +15,10 @@ You should have received a copy of the GNU Lesser General Public License along w
 see <http://www.gnu.org/licenses/>.
 ###
 
-assert = require "yaba"
-throws = require "throws"
-equal  = require "equals"
-sinon  = require "sinon"
+{assert, throws, equal, sinon} = require "./common"
 
 getExpression = require "../src/getExpression"
+
 
 readFileSync = null
 
