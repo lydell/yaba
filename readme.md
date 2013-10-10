@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lydell/yaba.png?branch=master)](https://travis-ci.org/lydell/yaba)
+
 Overview
 ========
 
