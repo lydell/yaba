@@ -1,6 +1,6 @@
 {
   "name": "yaba",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "author": "Simon Lydell",
   "license": "LGPLv3",
   "description": "Yet Another Better Assert. Shows the expression. Cross-browser.",
@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "test": "mocha --compilers coffee:coffee-script",
-    "prepublish": "rm lib/* && coffee -cbo lib/ src/"
+    "prepublish": "rm -f lib/* && coffee -cbo lib/ src/"
   },
   "dependencies": {
     "parse-stack": "~0.1.0"

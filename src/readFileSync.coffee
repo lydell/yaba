@@ -21,7 +21,7 @@ if typeof XMLHttpRequest is "function"
 		request.open("GET", path, false) # `false` makes the request synchronous.
 		request.send(null) # `null` indicates that no body content is needed.
 
-		if request.status is 200
+		if request.status < 400
 			return request.responseText
 		else
 			throw new Error "Could not fetch #{path}:\n#{request.responseText}"
