@@ -57,10 +57,4 @@ yaba.error = {}
 
 clean = -> yaba.actual = yaba.expected = yaba.message = undefined
 
-switch
-	when typeof define is "function" and define.amd
-		define(yaba)
-	when typeof module is "object"
-		module.exports = yaba
-	else
-		@yaba = yaba
+module.exports = yaba
