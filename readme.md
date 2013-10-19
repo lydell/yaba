@@ -210,8 +210,8 @@ else. Don't.
 Why "yaba"? What's the difference compared to other assertion libs?
 ===================================================================
 
-It's an acronym for "Yet Another Better Assert", since it is inspired by [visionmedia/better-
-assert], [this fork of it][Pingdom/better-assert] for CoffeeScript support, [rhoot/cassert] and
+It's an acronym for "Yet Another Better Assert" since it is inspired by [visionmedia/better-assert],
+[this fork of it][Pingdom/better-assert] for CoffeeScript support, [rhoot/cassert] and
 [component/assert].
 
 The difference is that it works not only in Node.js or V8-powered browsers, but a lot of other
