@@ -29,8 +29,7 @@ More examples: (in CoffeeScript)
 Installation
 ============
 
-`npm install yaba`
-`component install lydell/yaba`
+`npm install yaba` or `component install lydell/yaba`
 
 CommonJS: `var assert = require("yaba")`
 
@@ -85,14 +84,14 @@ next yaba call.
 module. An example:
 
 ```coffeescript
-assert = require "assert"
+assert = require "yaba"
 throws = require "throws"
 throws.messageHolder = assert
 
 assert throws TypeError, -> throw new Error
 ```
 ```
-Error: assert throws TypeError, -> throw new Error -- Expected the error to be an instance of TypeError.
+Error: assert throws TypeError, -> throw new Error -- Expected the error to be an instance of `TypeError`.
 ```
 
 throws sets `.message` for the next yaba call. Just like `equal`, only call it inside `yaba`.
@@ -116,11 +115,11 @@ assert false # My custom extra message
 Error: assert false # My custom extra message
 ```
 
-That's why yaba only takes one parameter, as opposed to many other assert functions which take two:
-an expression and an optional message.
+That's why yaba only takes one parameter, as opposed to many other assert functions which take two
+(an expression and an optional message).
 
 [throws]: https://github.com/lydell/throws
-[mocha]: https://github.com/visionmedia/mocha
+[mocha]:  https://github.com/visionmedia/mocha
 
 `error.yaba && yaba.error`
 --------------------------
@@ -141,7 +140,7 @@ at the given position.
 
 Better yet, if you're running CoffeeScript files via the `coffee` command, the stack trace will
 point to the original CoffeeScript source, giving you the expression in CoffeeScript. (Requires
-CoffeeScript > 1.6.3). That's currently not possible in any browser.
+CoffeeScript 1.7.0 or later). That's currently not possible in any browser.
 
 If the environment does not put a `stack` property on error objects, yaba still works. You just
 don't get the expression in the error message. Instead you get something like "Assertion 15 failed".
@@ -149,9 +148,9 @@ The number of runs is actually stored in `assert.runs`. If you plan to use it a 
 browser, you perhaps would like to reset that before each test, like `beforeEach -> assert.runs =
 0`, to ease the debugging.
 
-[stack]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack
+[stack]:       https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack
 [parse-stack]: https://github.com/lydell/parse-stack
-[local-xhr]: http://leaverou.github.io/prefixfree/#local-xhr
+[local-xhr]:   http://leaverou.github.io/prefixfree/#local-xhr
 
 
 Quirks
@@ -222,9 +221,9 @@ assertion count. Oh, and don't forget the `.actual`, `.expected` and `.message`.
 As a Star Wars fan, I also like that "yaba" sounds a bit like "Jabba" [the Hutt].
 
 [visionmedia/better-assert]: https://github.com/visionmedia/better-assert
-[Pingdom/better-assert]: https://github.com/Pingdom/better-assert/tree/feature-coffee
-[rhoot/cassert]: https://github.com/rhoot/cassert
-[component/assert]: https://github.com/component/assert
+[Pingdom/better-assert]:     https://github.com/Pingdom/better-assert/tree/feature-coffee
+[rhoot/cassert]:             https://github.com/rhoot/cassert
+[component/assert]:          https://github.com/component/assert
 
 
 License
