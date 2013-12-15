@@ -1,6 +1,6 @@
 {
   "name": "yaba",
-  "version": "0.1.8",
+  "version": "0.1.10",
   "main": "lib/yaba.js",
   "ignore": [
     ".*"
