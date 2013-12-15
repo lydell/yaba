@@ -256,6 +256,7 @@ yaba = function(value) {
   assertionError.yaba = yaba.error;
   assertionError.actual = yaba.actual;
   assertionError.expected = yaba.expected;
+  assertionError.showDiff = true;
   clean();
   throw assertionError;
 };
@@ -268,16 +269,7 @@ clean = function() {
   return yaba.actual = yaba.expected = yaba.message = void 0;
 };
 
-switch (false) {
-  case !(typeof define === "function" && define.amd):
-    define(yaba);
-    break;
-  case typeof module !== "object":
-    module.exports = yaba;
-    break;
-  default:
-    this.yaba = yaba;
-}
+module.exports = yaba;
 
 });
 require.register("yaba/lib/getExpression.js", function(exports, require, module){

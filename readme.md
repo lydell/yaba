@@ -72,7 +72,7 @@ assert equal compiler.compile(read("input.file")), read("input.file.expected")
 ```
 
 Now, each time you call `equal` it will set up `.actual` and `.expected` for the next yaba call.
-yaba then puts those properties on the error it throws.
+yaba then puts those properties on the error it throws. It also sets `.showDiff` to `true`.
 
 If your testing frameworks supports `error.actual` and `error.expected` (like [mocha]) you will now
 get nice diffs if the `compiler` is buggy, etc.

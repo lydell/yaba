@@ -47,6 +47,7 @@ yaba = (value)->
 
 	assertionError.actual   = yaba.actual
 	assertionError.expected = yaba.expected
+	assertionError.showDiff = true
 
 	clean()
 

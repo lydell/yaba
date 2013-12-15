@@ -63,6 +63,11 @@ describe "yaba", ->
 		assert yaba.expected is undefined
 
 
+	it "sets the showDiff property on the thrown error", ->
+		try yaba(false) catch error
+		assert error.showDiff is true
+
+
 	it "allows to extend the error message", ->
 		yaba.message = "Extra message"
 		try yaba(false) catch error
