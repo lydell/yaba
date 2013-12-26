@@ -91,7 +91,8 @@ throws.messageHolder = assert
 assert throws TypeError, -> throw new Error
 ```
 ```
-Error: assert throws TypeError, -> throw new Error -- Expected the error to be an instance of `TypeError`.
+Error: Assertion 1 failed. Expected the error to be an instance of `TypeError`.
+assert throws TypeError, -> throw new Error
 ```
 
 throws sets `.message` for the next yaba call. Just like `equal`, only call it inside `yaba`.
@@ -103,7 +104,8 @@ assert.message = "My custom extra message"
 assert false
 ```
 ```
-Error: assert false -- My custom extra message
+Error: Assertion 1 failed. My custom extra message
+assert false
 ```
 
 But it is probably a better idea to use a comment:
@@ -112,7 +114,8 @@ But it is probably a better idea to use a comment:
 assert false # My custom extra message
 ```
 ```
-Error: assert false # My custom extra message
+Error: Assertion 1 failed.
+assert false # My custom extra message
 ```
 
 That's why yaba only takes one parameter, as opposed to many other assert functions which take two
@@ -143,10 +146,10 @@ point to the original CoffeeScript source, giving you the expression in CoffeeSc
 CoffeeScript 1.7.0 or later). That's currently not possible in any browser.
 
 If the environment does not put a `stack` property on error objects, yaba still works. You just
-don't get the expression in the error message. Instead you get something like "Assertion 15 failed".
-The number of runs is actually stored in `assert.runs`. If you plan to use it a lot in some old
-browser, you perhaps would like to reset that before each test, like `beforeEach -> assert.runs =
-0`, to ease the debugging.
+don't get the expression in the error message. You still get something like "Assertion 15 failed",
+though. The number of runs is actually stored in `assert.runs`. If you plan to use it a lot in some
+old browser, you perhaps would like to reset that before each test, like `beforeEach -> assert.runs
+= 0`, to ease the debugging.
 
 [stack]:       https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack
 [parse-stack]: https://github.com/lydell/parse-stack

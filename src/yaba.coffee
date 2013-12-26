@@ -39,8 +39,9 @@ yaba = (value)->
 	catch error
 		console?.log "yaba: #{error}"
 
-	message = expression or "Assertion #{yaba.runs} failed"
-	message += " -- #{yaba.message}" if yaba.message
+	message = "Assertion #{yaba.runs} failed."
+	message += " #{yaba.message}" if yaba.message
+	message += "\n#{expression}"  if expression
 
 	assertionError = new Error message
 	assertionError.yaba = yaba.error

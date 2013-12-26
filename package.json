@@ -1,6 +1,6 @@
 {
   "name": "yaba",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "author": "Simon Lydell",
   "license": "LGPLv3",
   "description": "Yet Another Better Assert. Shows the expression. Cross-browser.",

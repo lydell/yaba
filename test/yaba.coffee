@@ -71,7 +71,7 @@ describe "yaba", ->
 	it "allows to extend the error message", ->
 		yaba.message = "Extra message"
 		try yaba(false) catch error
-		assert error.message.match(/\ -- Extra message$/)
+		assert error.message.match(/^Assertion \d+ failed\. Extra message/)
 		assert yaba.message is undefined
 
 		yaba.message = "Extra message"
@@ -90,11 +90,11 @@ describe "yaba", ->
 		assert yaba.runs is 12
 
 
-	it "uses the source of its argument expression if available, otherwise the runs count", ->
+	it "uses the source of its argument expression if available, and always the runs count", ->
 		yaba.runs = 1336
 		try
 			# Intentionally JavaScript style.
 			yaba(true && false);
 		catch error
 
-		assert error.message in ["yaba(true && false);", "Assertion 1337 failed"]
+		assert error.message.match(/Assertion 1337 failed\.(\nyaba(true && false);)?/)
