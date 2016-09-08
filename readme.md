@@ -1,3 +1,6 @@
+**DEPRECATED.** Use any sane assertion library instead.
+
+
 [![Build Status](https://travis-ci.org/lydell/yaba.png?branch=master)](https://travis-ci.org/lydell/yaba)
 
 Overview
